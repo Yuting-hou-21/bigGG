@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {MessageList, MessageListItem} from "@hilla/react-components/MessageList";
-import {ChatService} from "Frontend/generated/endpoints";
+import {AIChatEndpoint} from "Frontend/generated/endpoints";
 import {MessageInput} from "@hilla/react-components/MessageInput";
 
 export default function StreamingChatView() {
@@ -21,15 +21,15 @@ export default function StreamingChatView() {
     async function sendMessage(message: string) {
         addMessage({
             text: message,
-            userName: 'You'
+            userName: 'You🤌'
         });
 
         let first = true;
-        ChatService.chatStream(message).onNext(chunk => {
+        AIChatEndpoint.chatStream(message).onNext(chunk => {
             if (first && chunk) {
                 addMessage({
                     text: chunk,
-                    userName: 'Assistant'
+                    userName: '你的聊天小夥伴🧑‍🤝‍🧑'
                 });
 
                 first = false;

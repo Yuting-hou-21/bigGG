@@ -17,11 +17,11 @@ export default function MainLayout() {
         <header className="flex flex-col gap-m">
           <h1 className="text-l m-0">AI Chat 🤖</h1>
           <nav>
-            <NavLink className={navLinkClasses} to="/">
-              Chat
-            </NavLink>
             <NavLink className={navLinkClasses} to="/streaming">
-              Streaming Chat
+            AI即時聊天💗
+            </NavLink>
+            <NavLink className={navLinkClasses} to="/">
+            占卜🔮
             </NavLink>
           </nav>
         </header>

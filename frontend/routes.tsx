@@ -1,4 +1,4 @@
-import ChatView from 'Frontend/views/chat/ChatView';
+import AIChatView from 'Frontend/views/chat/AIChatView';
 import MainLayout from 'Frontend/views/MainLayout.js';
 import { lazy } from 'react';
 import { createBrowserRouter, RouteObject } from 'react-router-dom';
@@ -10,8 +10,8 @@ export const routes: RouteObject[] = [
     element: <MainLayout />,
     handle: { title: 'Main' },
     children: [
-      { path: '/', element: <ChatView />, handle: { title: 'Chat' } },
-      { path: '/streaming', element: <StreamingChatView />, handle: { title: 'Streaming Chat' } },
+      { path: '/', element: <AIChatView />, handle: { title: '占卜🔮' } },
+      { path: '/streaming', element: <StreamingChatView />, handle: { title: 'AI即時聊天💗' } },
     ],
   },
 ];
